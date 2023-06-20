@@ -1,5 +1,6 @@
-before(() => {
+beforeEach(() => {
 
+  cy.visit('/board/1')
 
 })
 
@@ -10,8 +11,6 @@ describe('group #1', () => {
   });
 
   it('otvorenie aplikácie', () => {
-
-
 
   });
 
@@ -28,9 +27,10 @@ describe('group #2', () => {
 
   it('otvorenie boardu', () => {
 
-    cy.visit('/board/1')
-
   })
 
 });
+
+// odporucanie od veduceho kurzu je pouzivat cistenie test dat
+// radsej v beforeEach hookoch, nie after kvoli debugu
 

@@ -1,4 +1,18 @@
+// Cypress.Commands.add('dataCy', (selector) => {
 
+//   Cypress.log({
+//     displayName: 'dataCy',
+//     message: selector,
+//     consoleProps(){
+//       return{
+//         selector
+//       }
+//     }
+//   })
+
+//   cy.get(`[data-cy="${selector}"]`,{log:false})
+
+// })
 
 beforeEach(() => {
 
@@ -13,13 +27,13 @@ it('vlastne prikazy', function () {
 
   cy.visit(`/board/${this.boardId}`)
 
-  cy.get('[data-cy="add-list-input"]')
+  cy.dataCy('add-list-input')
     .type('Potraviny{enter}')
 
-  cy.get('[data-cy="new-card"]')
+  cy.dataCy('new-card')
     .click()
 
-  cy.get('[data-cy="new-card-input"]')
+  cy.dataCy('new-card-input')
     .type('mlieko{enter}')
 
 });
